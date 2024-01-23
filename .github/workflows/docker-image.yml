@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: echo "NAVER_MAP_API_ID=$NAVER_MAP_API_ID" >> .env
+          echo "NAVER_MAP_API_KEY=$NAVER_MAP_API_KEY" >> .env
+          docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    
