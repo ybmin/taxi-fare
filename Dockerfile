@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.12
 
 # Copy repo
 WORKDIR /code
@@ -8,9 +8,9 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Set environment variables
-#TODO: GitHub Environment Variables setting
-ENV NAVER_MAP_API_ID 
-ENV NAVER_MAP_API_KEY 
+# TODO: GitHub Environment Variables setting
+# ENV NAVER_MAP_API_ID 
+# ENV NAVER_MAP_API_KEY 
 
 # Run container
 EXPOSE 80
