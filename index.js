@@ -2,8 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const locations = require("./src/static/locations.json");
 const initDatabase = require("./init");
+const locations = require("./src/static/locations.json");
 const TaxiFare = require("./src/store/mongo.ts");
 
 dotenv.config();
