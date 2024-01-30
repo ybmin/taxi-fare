@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "axios": "^1.6.7",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.12.0"
   }
 }
